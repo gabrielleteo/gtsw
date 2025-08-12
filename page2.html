@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, intiial-scale=1.0">
+        <title>Activity Logs</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body onload="username1()">
+    <div class="container">
+    <div class="row">
+        <div class="colA"> 
+
+        <div class="hidden" id="username1">
+            User: SleeplessKnight28 
+            <br><br>
+        </div>
+        <div class="hidden" id="dateTime1">
+            Date: 03.06.2135
+            <br>
+            Time: 03:01AM 
+        </div>
+                
+             
+        <div id="morning-text1" style="display: none;">
+            
+    
+        </div>
+        <div class="hidden"  id="day2button1" >
+            <br>
+        <button class="actionbuttons" onclick="startTyping()">
+            check activity logs
+            </button>
+            <br><br>
+        </div>
+
+        <div><br><br></div>
+        <div class="userlog" id="u1log1"></div>
+
+        <br><br>
+
+         <div class="hidden" id="dateTime3">
+            Date: 04.06.2135
+            <br>
+            Time: 01:05AM 
+            <br><br>
+        </div>
+
+         <div class="userlog" id="u1log2">
+            <br><br>
+         </div>
+
+        <div>
+            <br><br>
+            <button class="hidden" id="day2button6" onclick="lastpage()" >next activity >></button>
+        </div>
+       
+        <div class="userlog" id="u1log3"></div>
+
+        <!-- <p class="userlog" id="u1log1"></p>
+        <p class="userlog" id="u1log2"></p> -->
+
+         <div  id="morning-text2" style="display: none;">
+            <br><br>
+            “It’s always a sunny day,” you mutter.
+            </div>
+
+            <!-- <div id="morning-text2">
+            You suddenly miss the softness of a cloudy day and a rainy sky, but then remember they don’t capture the grey well. 
+
+            You shake your head, “Too harsh”. 
+            </div>
+
+            <button class="actionbuttons" id="day1button2" style="display:none" onclick="button2()">
+            change the sky
+            </button>
+
+            <div id="day1text2" style ="display:none;">
+                Still in bed, you call out, “change scene, night time”. 
+
+                The voice returns, 
+                “I’m sorry you don’t have the permission to do that. Upgrade to premium if you want to access our full library of time defiant scenes!”
+
+            </div> -->
+            <div>
+            
+            </div>
+            </div>
+            
+        <div class="colB">
+
+            <div class="hidden" id="username2">
+                User: PhantomFighter 
+            <br><br> 
+            </div>
+            <div class="hidden" id="dateTime2">  
+            Date: 03.06.2135
+            <br>
+            Time: 03:01AM 
+            <br><br><br>
+            </div>
+
+            <div id="nextButtonDiv" style="display: none;">
+                <button onclick="u2log1()" class="BdayButton" id="day2nextbutton">check activity logs
+                </button>
+                <br><br>
+            </div>
+
+            <div class="userlog" id="u2log1"></div>
+            <div>
+                <br><br>
+                <button class="BdayButton" id="day2button2" onclick="messagepopup()">open message</button>
+            </div>
+
+            <div>
+                <button class="hidden" class="BdayButton" id="day2button3" onclick="u2log2()" >view next activity</button>
+            </div>
+
+            <div class="userlog" id="u2log2"></div>
+            <div>
+                <br><br>
+                <button class="hidden" class="BdayButton" id="day2button4" onclick="day3switch()" >next day >></button>
+            </div>
+
+            <div>
+                <br><br>
+                <button class="hidden" id="day2button5" onclick="day3switchB()" >view next activity</button>
+            </div>
+           
+           <div class="hidden" id="dateTime4">
+            Date: 04.06.2135
+            <br>
+            Time: 02:32AM 
+            <br><br>
+            </div>
+
+            <div class="userlog" id="u2log3"></div>
+
+           
+             
+      </div>      
+        
+        
+</body>
+</html> 
