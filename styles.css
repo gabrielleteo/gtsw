@@ -1,0 +1,427 @@
+@font-face {
+    font-family: 'Future Z';
+    src: url(fonts/Future\ Z.ttf);
+}
+
+@font-face {
+    font-family: 'Dune_Rise';
+    src: url(fonts/Dune_Rise.ttf);
+}
+
+@font-face {
+    font-family: 'Oxanium';
+    src: url(fonts/Oxanium-Light.ttf);
+}
+
+@font-face {
+    font-family: 'Neuropol';
+    src: url(fonts/Neuropol\ X\ Rg.otf);
+}
+
+body {
+    background: #000;
+    color: #a5f0ff;
+    font-family: 'Oxanium'; 
+    font-style: oblique;
+    margin: 0;
+    padding: 0;
+    font-weight: 200;
+}
+
+#story {
+    max-width: 80vw;
+    margin: 60px auto;
+    font-size: 1.3em;
+    line-height: 1.7;
+    letter-spacing: 0.02em;
+    white-space: pre-line;
+    transition: opacity 1s ease;
+}
+
+#story.fade-out {
+    opacity: 0;
+}
+
+.column {
+    position: fixed;
+    bottom: 0;
+    width: 30vw;
+    height: 0;
+    background: linear-gradient(to bottom, lightblue 0%, #eacb7e 100%);;
+    transition: height 2s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 10;
+}
+.left-column {
+    left: 0;
+    border-top-right-radius: 0px;
+}
+.right-column {
+    right: 0;
+    border-top-left-radius: 0px;
+}
+
+.columns-join.left-column {
+    width: 50vw !important;
+    left: 0 !important;
+    height: 100vh;
+}
+.columns-join.right-column {
+    width: 50vw !important;
+    right: 0 !important;
+    height: 100vh;
+}
+
+body.blue-bg {
+    background: linear-gradient(to bottom, lightblue 0%, #eacb7e 100%) !important;
+    transition: background 5s;
+    height: 100vh;
+}
+
+#story2 {
+    font-family: 'Future Z';
+    font-size: 6vw;
+    color: rgb(255, 255, 255);
+    z-index: 100;
+    position: relative;
+    align-items: center;
+    align-content: center;
+    margin: 5%;
+    padding: 5%
+    /* transition: opacity 1s ease; */
+}
+
+#next-button {
+    font-family: 'Bitcount Grid Double';
+    font-size: 3vw;
+    margin-left: 38%;
+    padding: 1%;
+    background-color: #195667; 
+    color: white;
+    border: none;
+    cursor: grab;
+    z-index: 200; /* Ensure it is above other elements */
+    /* transition: opacity 2s ease; */
+}
+
+
+
+#next-button:hover {
+    background-color: #2b91a5;
+    color: #195667; 
+;
+}
+
+#next-button-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.hidden {
+  opacity: 0;
+}
+.fade-in {
+  opacity: 1;
+  transition: opacity 2.5s ease-in;
+}
+.fade-in-fast {
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh; /*this means full height of the viewport*/
+}
+
+.row {
+    display: flex;
+    width: 100vw;
+    height: 100vh; 
+}
+
+.rowB {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box; 
+    text-align: center;
+    
+}
+
+.row-1 {
+    height: 20vh;
+      box-sizing: border-box;
+}
+
+.row-2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /*asked chatgpt to help fix the spacing*/
+    gap: 1vw; 
+    width: 100%;
+    box-sizing: border-box;
+    
+
+}
+
+.row-3 {
+    height: 50vh;
+      box-sizing: border-box;
+}
+
+.row-4 {
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.col-1a img {
+    width: 30vw;
+    height: 25vh;
+    
+    text-align: center;
+    box-sizing: border-box;
+    object-fit: contain;
+
+}
+
+.col-1b {
+    width: 70vw;
+    
+    color: white;
+    text-align: left;
+    box-sizing: border-box;
+    object-fit: contain;
+}
+
+.col-2 img {
+    width: 29vw;
+    height: 47vh;
+   
+    margin: 1%;
+    object-fit: contain;
+    justify-content: center;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.col-3a img {
+    width: 65vw;
+    height: 60vw;
+    object-fit: contain;
+    justify-content: center;
+    
+}
+
+
+.col-3b {
+    width: 26vw;
+    justify-content: left;
+    text-align: left;
+    padding: 1%;
+}
+
+.darkimg {
+  display: inline-flex;
+  transition: 0.3s;
+  filter: brightness(0.8);
+  
+}
+
+.darkimg:hover {
+  transform: scale(1.3);
+  filter: brightness(1);
+}
+
+
+.colA {
+   flex: 1;
+   flex-direction: column;
+    background-color: #a5f0ff;
+    text-align: center;
+    padding: 5%;
+    font-size: 1.5vw;
+    color: #195667;
+    font-family: 'Oxanium';
+}
+
+.colB {
+   flex: 1;
+   flex-direction: column;
+    background-color: #171c20;
+    text-align: center;
+    padding: 5%;
+    font-size: 1.5vw;
+    color: rgb(200, 0, 0);
+    font-family: 'Oxanium';
+}
+
+.actionbuttons {
+    font-family: 'Bitcount Grid Double';
+    font-size: 1.5vw;
+    padding: 1%;
+    background-color: #195667; 
+    color: white;
+    border: none;
+    cursor: grab;
+    z-index: 200;
+}
+
+.actionbuttons:hover {
+ background-color: #2b91a5;
+color: #195667; 
+}
+
+#day1button1 {
+    align-self: flex-end;
+    margin-left: 80%
+}
+
+.day1text6 {
+    background-color: #171c20;
+    color: purple;
+    font-family: 'Courier New', Courier, monospace;
+    padding-top: 2%;
+    padding-left: 10%; 
+    padding-right: 10%;
+    font-size: 3vw;
+}
+
+.user2 {
+    background-color: #171c20;
+    color: rgb(157, 0, 0);
+    font-family: 'Oxanium';
+    font-size: 2vw;
+}
+
+.button1C {
+    color: rgb(179, 0, 0);
+    background-color: #171c20;
+    font-family: 'Oxanium';
+    font-size: 2vw;
+    border: 0;
+}
+
+.button1C:hover {
+    color: white
+}
+
+body.screenchange {
+    background-image: url(images/citylandscape.png);
+    display: none;
+}
+
+body.screenchangeB {
+    background-image: url(images/cityday.png);
+    display: none;
+
+}
+
+#day1text7 {
+    font-size: 4vw;
+    color: rgb(179, 0, 0);
+
+}
+
+body.screenchangeC {
+    background-image: url(images/user2bg.png);
+    display: none;
+
+}
+
+#Bday1text1 {
+    background-color: #171c20;
+    color: rgb(157, 0, 0);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2vw;
+}
+
+#watchFaceImage {
+    display: none;
+    max-width: 30vw;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+#watchFaceDiv {
+    text-align: center;
+}
+
+.BdayButton {
+    background-color: rgb(155, 0, 0);
+    color: #171c20;
+    font-family: 'Bitcount Grid Double';
+    font-size: 2vw;
+    display: none;
+}
+
+.BdayButton2 {
+    background-color: rgb(155, 0, 0);
+    color: #171c20;
+    font-family: 'Bitcount Grid Double';
+    font-size: 2vw;
+
+}
+
+
+.BdayButton:hover {
+    background-color: gray;
+}
+
+#BdayButton2 {
+    transform: translate(70%, 150%);
+}
+
+#BdayButton3 {
+    transform: translate(140%, 180%);
+}
+
+#BdayButton4 {
+    transform: translate(0%, -20%);
+}
+
+#BdayButton5 {
+    transform: translate(180%, 30%);
+}
+
+/* #day2button1 {
+    transform: translate(60%);
+
+} */
+
+.userlog {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: left;
+}
+
+#imgdiv {
+    text-align: center;
+}
+
+#phantomfighter {
+    color:rgb(179, 0, 0)
+}
+
+#phantomfighter:hover {
+    color: grey;
+}
+
+#sleeplessknight28 {
+    color:#195667;
+    font-size: 2vw;
+}
+
+#sleeplessknight28:hover {
+    color: rgb(128, 128, 128);
+}
+
+#finalButton:hover {
+    cursor: grab;
+    background-color: rgb(128, 128, 128);
+}
