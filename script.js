@@ -7,7 +7,7 @@ const storyText = [
     "They read,",
     "07:59.",
     "The screen pauses before flashing 08:00.",
-    "In an instant each wall lights up with the searing brightness of blue skies plastered behind over-saturated yellow sand of the shoreline."
+    "In an instant each wall lights up with the searing brightness of blue skies plastered behind over-saturated yellow sand."
 ];
 
 const storyDiv = document.getElementById('story');
@@ -62,11 +62,12 @@ function showStory(lines) {
         } else {
             showColumns();
             setTimeout(() => {
-            storyDiv.classList.add('fade-out'); setTimeout(() => {
+            storyDiv.classList.add('fade-out'); 
+            setTimeout(() => {
             storyDiv.style.display = 'none';
         }, 1000); }, 1000);
             setTimeout(() => {
-                document.body.classList.add('blue-bg');}, 1200);
+                document.body.classList.add('blue-bg');}, 1800);
             setTimeout(() => {
              document.querySelector('.left-column').style.display = 'none';
              document.querySelector('.right-column').style.display = 'none'; }, 2000);
@@ -88,7 +89,11 @@ function showStory(lines) {
 showStory(storyText);
 
 document.getElementById("next-button").addEventListener("click", function() {
-  window.location.href = "index2.html";
+  const sound = new Audio('ambient music.mp3');
+    sound.play();
+setTimeout(() => {
+    window.location.href = "index2.html";
+}, 9500);
   
 });
 
@@ -135,6 +140,10 @@ function day1button3() {
                 day1text4a.classList.add("fade-in-fast")
             }, 1500);
      setTimeout(() => {
+        const sound = new Audio('screenchangesfx.mp3');
+                sound.play();
+    }, 2500);
+     setTimeout(() => {
                 const screenchange = document.getElementById("screenchange");
                 screenchange.style.display = "block";
                 screenchange.classList.add("screenchange");
@@ -158,8 +167,6 @@ function day1button3() {
                 day1text7.style.display = "block";
                 const sound = new Audio('slam.mp3');
                 sound.play();
-            }, 11500);
-    setTimeout(() => {
                 const screenchangeC = document.getElementById("screenchange");
                 screenchangeC.style.display = "block";
                 screenchangeC.classList.add("screenchangeC");
@@ -227,6 +234,10 @@ function day1button3b() {
                 day1text4c.classList.add("fade-in-fast");
     }, 1500);
     setTimeout(() => {
+        const sound = new Audio('screenchangesfx.mp3');
+                sound.play();
+    }, 2500);
+    setTimeout(() => {
                 const screenchangeB = document.getElementById("screenchange");
                 screenchangeB.style.display = "block";
                 screenchangeB.classList.add("screenchangeB");
@@ -237,7 +248,6 @@ function day1button3b() {
                 day1text5.style.display = "block";
                 day1text5.classList.add("fade-in-fast")
                 document.getElementById('day1text5').style.display='none';
-
             }, 4500);
     setTimeout(() => {
                 const day1text6 = document.getElementById("day1text6");
@@ -249,12 +259,10 @@ function day1button3b() {
                 day1text7.style.display = "block";
                 const sound = new Audio('slam.mp3');
                 sound.play();
-            }, 10000);
-    setTimeout(() => {
                 const screenchangeC = document.getElementById("screenchange");
                 screenchangeC.style.display = "block";
                 screenchangeC.classList.add("screenchangeC");
-            }, 10000); 
+            }, 10000);
     setTimeout(() => {
                  const Bday1text1 = document.getElementById("Bday1text1");
                 Bday1text1.style.display = "block";
@@ -382,6 +390,8 @@ function index2text1() {
 
 function watchFace() {
     document.getElementById('watchFaceImage').style.display="block"
+    const sound = new Audio('watch.mp3');
+    sound.play();
     setTimeout(() => {
         const Bday1text7 = document.getElementById("Bday1text7");
             Bday1text7.style.display = "block";
@@ -475,7 +485,10 @@ function username1() {
 
 function startTyping() {
     document.getElementById('day2button1').style.display='none'
-    const target = document.getElementById('u1log1');
+    const sound = new Audio('lettersappearing.mp3');
+    sound.play();
+    setTimeout(() => {
+        const target = document.getElementById('u1log1');
     const lines = [
         'Google search: “why cant i sleep at night”',
         '\n\n',
@@ -513,13 +526,18 @@ function startTyping() {
     }
     target.innerHTML = "";
     typeLine();
+    }, 500);
+    
 }
 
 
 function u2log1() {
     document.getElementById('nextButtonDiv').style.display='none';
     document.getElementById('day2nextbutton').style.display='none';
-    const target = document.getElementById('u2log1');
+    const sound = new Audio('lettersappearing.mp3');
+    sound.play();
+    setTimeout(() => {
+        const target = document.getElementById('u2log1');
     const lines = [
         'Article: "why you really cant sleep"',
         '\n\n',
@@ -552,6 +570,8 @@ function u2log1() {
     }
     target.innerHTML = "";
     typeLine();
+    }, 500);
+    
 }
 
 function messagepopup() {
@@ -565,7 +585,12 @@ day2button3.classList.add('fade-in-fast');
 
 function u2log2() {
     document.getElementById('day2button3').style.display='none';
-    const target = document.getElementById('u2log2');
+     setTimeout(() => {
+    const sound = new Audio('lettersappearing.mp3');
+    sound.play();
+   }, 250);
+    setTimeout(() => {
+         const target = document.getElementById('u2log2');
     const lines = [
         'Messaging ended.',
         '\n\n',
@@ -601,11 +626,17 @@ function u2log2() {
     }
     target.innerHTML = "";
     typeLine();
+    }, 500);
+   
 }
 
 
 function day3switch() {
    document.getElementById('day2button4').style.display='none';
+   setTimeout(() => {
+    const sound = new Audio('lettersappearing.mp3');
+    sound.play();
+   }, 250);
     const dateTime3 = document.getElementById("dateTime3");
     dateTime3.style.display = "block";
     dateTime3.classList.add("fade-in-fast");
@@ -679,6 +710,10 @@ function day3switchB() {
     const dateTime3 = document.getElementById("dateTime4");
     dateTime3.style.display = "block";
     dateTime3.classList.add("fade-in-fast");
+   setTimeout(() => {
+    const sound = new Audio('lettersappearing.mp3');
+    sound.play();
+   }, 250);
     setTimeout(() => {
         const target = document.getElementById('u2log3');
     const lines = [
@@ -722,6 +757,10 @@ function day3switchB() {
 
 function lastpage() {
     document.getElementById('day2button6').style.display='none';
+     setTimeout(() => {
+    const sound = new Audio('lettersappearing.mp3');
+    sound.play();
+   }, 250);
     setTimeout(() => {
         const target = document.getElementById('u1log3');
     const lines = [
@@ -760,8 +799,10 @@ function lastpage() {
 }
 
 function lastText() {
-     document.getElementById('finalButton').style.display='none';
+    document.getElementById('finalButton').style.display='none';
     const finalText = document.getElementById("finalText");
     finalText.style.display = "block";
     finalText.classList.add("fade-in-fast");
+     const sound = new Audio('gamesave.mp3');
+    sound.play();
 }
