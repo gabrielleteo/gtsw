@@ -1,5 +1,5 @@
 const storyText = [
-    "Date: June 3rd 2135.",
+    "Date: June 2nd 2135.",
     "Location: Sydney City",
     "The room is dark.",
      "The only light emanating from a vintage alarm clock.", 
